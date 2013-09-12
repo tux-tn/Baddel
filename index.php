@@ -44,19 +44,19 @@ input, textarea
 <body>
 <a href="" id="tabzilla">Menu</a>
 <div style="clear:both"></div>
-<form id="add_user_menu_form" method="post" action="controle/addUser.php">
+<form id="add_user_menu_form" method="post" action="controle/addUser.php" data-validate="parsley">
 <div class="row-fluid">
 	<div class="span8 offset2">
 		<div class="row-fluid">
         		<div class="span3">
-   					 <input type="text" name="Nom" id="nom" required="required" placeholder="Nom">
+   					 <input type="text" data-type="alphanum" name="Nom" id="nom" required="required" placeholder="Nom">
 				</div>
                 <div class="span3">
-                   	 <input type="text" name="Prenom" id="Prenom" required="required" placeholder="Prenom">
+                   	 <input type="text" data-type="alphanum" name="Prenom" id="Prenom" required="required" placeholder="Prenom">
 
 				</div>
                 <div class="span3 offset1">
-                   	 <input type="text" name="Email" id="Email" required="required" placeholder="Email">
+                   	 <input  name="Email" id="Email" required="required" placeholder="Email" data-trigger="keyup"  type="email" >
 
 				</div>
         </div>
@@ -70,7 +70,7 @@ input, textarea
          		<input type="text" id="ClasseDest" name="ClasseDest" required="required" placeholder="Classe demandée">
         	</div>
             <div class="span3 offset2">
-<textarea id="Notes" name="Notes" rows="4" placeholder="Notes" ></textarea>
+<textarea id="Notes" name="Notes" rows="4" data-maxlength="300" placeholder="Notes" data-trigger="keyup" ></textarea>
 				</div>
         	<div class="row-fluid">
             
@@ -79,9 +79,7 @@ input, textarea
     <span class="help-block">Ce mot de passe n'est pas obligatoire.<br />Il vous permet d'effacer votre publication. </span>
 
             </div>
-            <script>
-			$('#pwd_info').popover('show')
-			</script>
+         
             
             <div class="span2 offset6"><input type="submit" class="btn btn-large btn-success" value="Submit" /></div>
             </div>
@@ -100,6 +98,7 @@ input, textarea
 
 <script src="js/jquery-2.0.3.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/parsley.min.js"></script>
 
 </body>
 </html>
