@@ -151,30 +151,31 @@ del
 <script>
 $(document).ready(function() {
     $('#the_list').dataTable();
-	
+});
+</script>
+<script language="javascript" type="text/javascript">
+
+window.setInterval(function verif()
+{
 	if(window.XMLHttpRequest)
 		xhr=new XMLHttpRequest();
-		
+	alert(xhr.readyState);
+
 	xhr.onreadystatechange = function()
 	{
 		if((xhr.readyState==4) && (xhr.status==200))
 		{
-					alert('test');	
-
-		
+	
 			document.getElementById('the_list').innerHTML = xhr.responseText;
 		}
 		
-	xhr.open('GET','controle/liste.php',true);
+	xhr.open('GET','./controle/liste.php',true);
 	xhr.send(null);
 	}
 
-						alert('test2');	
-
-	
-} );
 
 
+},5000);
 
 </script>
 </body>
