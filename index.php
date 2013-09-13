@@ -7,10 +7,7 @@
 	margin-top:20px;
 }
 textarea{resize: none}
-body
-{
-	background-color:#0FF;
-}
+
 #info_base
 {
 	float:left;
@@ -30,16 +27,12 @@ input, textarea
 	max-width:100%;
 	width:auto;
 }
-#main
-{
-	background-color:#F00;
-}
-</style>
 
-<style type="text/css">
-      body {
+
+  body {
         padding-top: 20px;
         padding-bottom: 40px;
+
       }
 
       /* Custom container */
@@ -136,8 +129,8 @@ input, textarea
 
   <div class="masthead">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Publiez une demande</a></li>
+          <li class="active"><a href="index.php">Home</a></li>
+          <li><a href="publier.php">Publiez une demande</a></li>
           <li><a href="#">Liste des demandes</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
