@@ -398,28 +398,10 @@ var Tabzilla = (function (Tabzilla) {
     var content =
       '<div id="tabzilla-panel" class="tabzilla-closed" tabindex="-1">'
     + '  <div id="tabzilla-contents">'
-    + '   <form> <div>'
-    + '      <ul id="info_base">'
-    + '        <li><h2>Informations de base</h2>'
-    + '          <div>'
-    + '            <ul>'
-    + '              <li><input type="text" placeholder="Nom"  /> <input type="text" placeholder="Prenom"  /> </li>'
-    + '              <li><input type="text" placeholder="Depart"  /> <input type="text" placeholder="Destination"  /></li>'
-	 + '              <li><input type="password"  placeholder="*******" /></li>'
-	 
-	+ ' </ul>' 
-	+ ' </ul>' 
+    + ' <form id="add_user_menu_form" method="post" action="controle/addUser.php" data-validate="parsley"><div class="row-fluid"><div class="span12"><div class="row-fluid"><div class="span3"><input type="text" data-type="alphanum" name="Nom" id="nom" required="required" placeholder="Nom"></div><div class="span3"><input type="text" data-type="alphanum" name="Prenom" id="Prenom" required="required" placeholder="Prenom"></div><div class="span3 offset1"><input name="Email" id="Email" required="required" placeholder="Email" data-trigger="keyup" type="email" ></div><div class="span1"><input type="submit" class="btn btn-block btn-success" value="Submit"/></div></div><div class="row-fluid"><div class="span2"><input type="text" name="ClasseDep" id="ClasseDep" required="required" placeholder="Classe de départ"></div><div class="span1"><i class="icon-arrow-right"></i></div><div class="span2"><input type="text" id="ClasseDest" name="ClasseDest" required="required" placeholder="Classe demandée"></div><div class="span3 offset2"><textarea id="Notes" name="Notes" rows="4" data-maxlength="300" placeholder="Notes" data-trigger="keyup" ></textarea></div><div class="row-fluid"><div class="span3"><input id="PWD" class="PWD" type="password" placeholder="Password"><i id="pwd_info" class="icon-question-sign"></i><span class="help-block">Ce mot de passe n'+' est pas obligatoire.<br/>Il vous permet d'+'effacer votre publication. </span></div></div></div></div></div></form> '
 
-	+ ' <ul id="info_perso">' 
 
- 	+ '        <li><h2>Informations personelles</h2>'
-    + '          <div>'
-    + '            <ul>'
-    + '              <li><input type="text" placeholder="Adresse m@il"  /></li>'
-    + '              <li><textarea placeholder="Notes" ></textarea> </li>'
-	+ ' </ul>' 
-
-    + '    </div> </form>'
+    + '    </div>'
     + '  </div>';
   
 
