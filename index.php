@@ -73,10 +73,12 @@ input, textarea
         margin-top: 28px;
       }
     </style>
+<link href="" rel="stylesheet">
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 <link href="css/tabzilla-min.css" rel="stylesheet" />
+  <link href='bootstrap/css/darkstrap.css' rel='stylesheet' />
 
 
 
@@ -135,6 +137,7 @@ input, textarea
   <div class="masthead">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Publiez une demande</a></li>
           <li><a href="#">Liste des demandes</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
@@ -146,11 +149,12 @@ input, textarea
       <div class="jumbotron">
         <h1>Permutez simplement les classes!</h1>
         <p class="lead">Entrez votre demande de permuttation, et grace à cette application trouvez des permuttations simplement et restez notifié par Email !</p>
-        <a class="btn btn-large btn-success" href="#">Postez une demande</a><br /><br />
-        <a class="btn btn-mini" href="#">Consulter les demandes</a>
+        <a class="btn btn-large btn-success" href="#">Publiez une demande</a>
+<br /><br />
+        <a class="btn btn-large" href="#">Consulter les demandes</a>
+
 
       </div>
-
       <hr>
 
       <div class="row-fluid marketing">
