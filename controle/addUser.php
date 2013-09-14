@@ -1,6 +1,28 @@
 <?php
-require_once('../Entite/User.php');
-require_once('../model/UserModel.php');
+
+if(!@file_exists('/Entite/User.php') ) {
+    echo 'can not include';
+} else {
+   include('/Entite/User.php');
+}
+if(!@file_exists('../Entite/User.php') ) {
+    echo 'can not include 2';
+} else {
+   include('../Entite/User.php');
+}
+
+if(!@file_exists('/model/UserModel.php') ) {
+    echo 'can not include 11';
+} else {
+   include('/model/UserModel.php');
+}
+
+if(!@file_exists('../model/UserModel.php') ) {
+    echo 'can not include 22';
+} else {
+   include('../model/UserModel.php');
+}
+
 
 
 $Nom = mysql_real_escape_string($_POST['Nom']);
@@ -27,7 +49,7 @@ else
 	$Notes = sha1('OP is a faggot');
 }
 
-$U = new  User($Nom,$Prenom,$Email,$PWD,$Depart,$Arive,$Notes);
+$U = new User($Nom,$Prenom,$Email,$PWD,$Depart,$Arive,$Notes);
 
 $UM = new UserModel();
 $UM->AddUser($U);

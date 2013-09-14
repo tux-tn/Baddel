@@ -1,6 +1,26 @@
 <?php
-require_once('../model/UserModel.php');
-require_once('../Entite/User.php');
+if(!@file_exists('/Entite/User.php') ) {
+    echo 'can not include';
+} else {
+   include('/Entite/User.php');
+}
+if(!@file_exists('../Entite/User.php') ) {
+    echo 'can not include 2';
+} else {
+   include('../Entite/User.php');
+}
+
+if(!@file_exists('/model/UserModel.php') ) {
+    echo 'can not include 11';
+} else {
+   include('/model/UserModel.php');
+}
+
+if(!@file_exists('../model/UserModel.php') ) {
+    echo 'can not include 22';
+} else {
+   include('../model/UserModel.php');
+}
 
 $UM = new UserModel();
 $liste = $UM->ReturnUsers();

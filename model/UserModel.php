@@ -1,6 +1,18 @@
 <?php
 
-require_once('..\Configuration.php');
+//allow_url_include = On
+
+if(!@file_exists('Configuration.php') ) {
+    echo 'can not include  C 11';
+} else {
+   include('Configuration.php');
+}
+
+if(!@file_exists('../Configuration.php') ) {
+    echo 'can not include  C 22';
+} else {
+   include('../Configuration.php');
+}
 
 
 /* class entreprise */
